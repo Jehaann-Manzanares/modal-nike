@@ -5,16 +5,216 @@
  --colorSecundary:#00bde2;
  --colorTertiary:#323337;
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0
+    margin: 0;
+    font-family:'Montserrat';
+    background: var(--colorPrimary)
 }
 
-img{
-    width: 20em;
+.logo{
+    width: 30em;
     height: auto;
+    animation-name: pulso;
+    animation-duration: 1s;
+    transition: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    cursor: pointer
+
+}
+
+.title{
+font-size: 5em;
+display: block;
+margin-right: 1em;
+
+}
+/* -----------------------
+        OVERLAY
+ -----------------------*/
+ .overlay{
+     background: rgba(0, 0, 0, 0.8);
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     opacity: 0;
+     visibility: hidden;
+     transition: 1s ease;
+     /* transition-delay: .3s */
+ }
+
+ .overlay.active{
+     opacity: 1;
+     visibility: visible;
+ }
+/* -----------------------
+        MODAL
+ -----------------------*/
+.modal{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 'zapatoNike content-modal';
+    max-width: 62.5em;
+    background-color: var(--colorPrimary);
+    /*  box-shadow x y */
+    /* box-shadow: 1px 1px 10px rgba(203, 203, 203, 0.9);  */
+   
+    /* animation: animationIn 1s forwards; */
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.zapatoNike{
+    grid-area: zapatoNike;
+    padding: 2em;
+    margin: 2em;
+    box-sizing: border-box
+    
+}
+
+.zapatoNike img{
+    width:100%;
+    height: auto;
+    
+}
+
+.content-modal{
+    grid-area: content-modal;
+    padding: 1em;
+    width: 100%;
+    background: white;
+    padding: 2em;
+    box-sizing: border-box
+    
+}
+.content-modal img{
+    width: 5em;
+    text-align: center;
+    margin-bottom: 1.8em
+}
+.menu{
+    margin-bottom: 4em;
+    padding: .3em;
+    text-align: center
+    
+}
+
+ul li {
+    display: inline-block;
+    margin-left: .8em; 
+    
+    
+}
+
+a{
+   text-decoration: none;
+   font-size: .8em;
+   color: var(--colorTertiary);
+   text-transform: uppercase;
+}
+
+.titles-content{
+    text-align: center
+}
+
+.titles-content h1{
+    font-family: 'Playfair Display';
+    font-size: 1.8em;
+    margin-bottom: 1.8em;
+    font-weight: bold
+    
+}
+
+.mayus{
+    text-transform: uppercase;
+}
+
+.titles-content p{
+    
+    font-size: .9em;
+    margin-bottom: 6.8em
+    
+}
+/* ----------------------
+        BUTTONS
+------------------------ */
+
+.btn{
+    padding: .8em 2em;
+    background: transparent;
+    border: 2px solid var(--colorTertiary);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--colorTertiary);
+    transition: .2s;
+    cursor: pointer;
+    outline: 0
+}
+
+.btn.secundary{
+    background: var(--colorSecundary);
+    border-color: var(--colorSecundary);
+    color: white;
+    margin-right: 1.5em
+}
+
+.btn:active{
+    transform: scale(.8)
+}
+
+/* -------------------------------------
+        ANIMATIONS
+----------------------------------------*/
+@keyframes pulso{
+    from{
+        transform: scale(.9)
+    }
+    to{
+        transform: scale(1)
+    }
+}
+@keyframes animationIn{
+    from{
+        transform: translateY(-3000px)
+    }
+    60%{
+        transform: translateY(25px)
+    }
+    75%{
+        transform: translateY(-10px)
+    }
+    90%{
+        transform: translateY(5px)
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+
+@keyframes animationOut{
+    from{
+        transform: translateY(5px)
+        }
+    60%{
+        transform: translateY(-10px)
+    }
+    75%{
+        transform: translateY(25px)
+    }
+    to{
+        transform: translateY(-3000px)
+    }
 }

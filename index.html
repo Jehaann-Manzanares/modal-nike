@@ -6,17 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Modal Nike</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/LogoNIKE.svg.webp" type="image/x-icon">
+    
 </head>
 <body>
-    <img src="img/LogoNIKE.svg.webp" alt="logoNike" onclick="logonike()" id="btnnike">
-    <div class="overlay">
-        <div class="modal">
-                <figure>
+    <h1 class="title">Just Do it.</h1>
+    <img src="img/LogoNIKE.svg.webp" alt="logoNike" onclick="logonike()" id="btnnike" class="logo">
+    <div class="overlay center" id="overlay" onclick="HideModal()">
+        <div class="modal" id="modal">
+                <div class="zapatoNike center">
                     <img src="img/img1.png" alt="zapato-nike">
-                </figure>
-                <section>
-                    <img src="img/LogoNIKE.svg.webp" alt="">
-                    <nav>
+                </div>
+                <section class="content-modal">
+                    <div class="center">
+                        <img src="img/LogoNIKE.svg.webp" alt="">
+                    </div>
+                    <nav class="menu">
                         <ul>
                             <li><a href="#">Men</a></li>
                             <li><a href="#">Woman</a></li>
@@ -25,13 +30,13 @@
                             <li><a href="#">Custome</a></li>
                         </ul>
                     </nav>
-                    <div>
-                        <h1>More to Love</h1>
+                    <div class="titles-content">
+                        <h1 class="mayus">More to Love.</h1>
                         <p>Sock-like fit. Timeless silhouette. Mix up your style with the pure simplicity of the Nike Flyknit Racer in</p>
                     </div>
-                    <div>
-                        <button class="btn secundary">shop now</button>
-                        <button class="btn">get notified</button>
+                    <div class="center">
+                        <button class="btn secundary" id="btn-shop" onclick="HideModal()">shop now</button>
+                        <button class="btn" id="btn-notified" onclick="HideModal()">get notified</button>
                     </div>
                 </section>
 
