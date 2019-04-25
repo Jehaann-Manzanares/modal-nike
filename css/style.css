@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+:root{
+ --colorPrimary:#fbe24a;
+ --colorSecundary:#00bde2;
+ --colorTertiary:#323337;
+}
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0
+}
+
+img{
+    width: 20em;
+    height: auto;
+}
