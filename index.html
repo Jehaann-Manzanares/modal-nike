@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Modal Nike</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/LogoNIKE.svg.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     
 </head>
 <body>
-    <h1 class="title">Just Do it.</h1>
-    <img src="img/LogoNIKE.svg.webp" alt="logoNike" onclick="logonike()" id="btnnike" class="logo">
+    <div class="contaner-home">
+        <h1 class="title">Just Do it.</h1>
+        <img src="img/LogoNIKE.svg.webp" alt="logoNike" onclick="logonike()" id="btnnike" class="logo">
+    </div>
     <div class="overlay center" id="overlay" onclick="HideModal()">
         <div class="modal" id="modal">
                 <div class="zapatoNike center">
@@ -34,7 +36,7 @@
                         <h1 class="mayus">More to Love.</h1>
                         <p>Sock-like fit. Timeless silhouette. Mix up your style with the pure simplicity of the Nike Flyknit Racer in</p>
                     </div>
-                    <div class="center">
+                    <div class="center buttons">
                         <button class="btn secundary" id="btn-shop" onclick="HideModal()">shop now</button>
                         <button class="btn" id="btn-notified" onclick="HideModal()">get notified</button>
                     </div>
